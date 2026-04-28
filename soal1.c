@@ -6,13 +6,14 @@
  *   Deskripsi           : Menampilkan penjaga terbaik untuk setiap shift
  * 
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 struct Petugas {
     char *nama;
     int id;
-    char shift[3];
+    char shift[10];
     int skor; 
 };
 int main (){
@@ -23,7 +24,7 @@ int main (){
     //input data
     for (int i=0;i<n;i++){
         arr[i].nama = (char *)malloc(100*sizeof(char));
-        scanf(" %[^\n] %d %[^\n] %d", arr[i].nama, &arr[i].id, arr[i].shift, &arr[i].skor);
+        scanf("%s %d %s %d", arr[i].nama, &arr[i].id, arr[i].shift, &arr[i].skor);
     }
     //4 Alya 101 PAGI 80 Bima 102 SIANG 92 Cika 103 PAGI 88 Doni 104 MALAM 70
     char pagi[]="PAGI";
